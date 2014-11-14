@@ -42,6 +42,13 @@ move = new Modifier({
 	transform: Transform.translate(25, 5, 0)
 });
 
+/*mainContext.add(new Surface(
+	{
+		properties: {
+    		backgroundColor: '#FA5C4F',
+  		}
+	})
+);*/
 mainContext.add(move).add(rn);
 
 // Begin spark motion
@@ -100,7 +107,7 @@ move.setTransform(
 
 move.setTransform(
   Transform.translate(156, 464, 0),
-  { duration : 900, curve: 'linear' }
+  { duration : 1000, curve: 'linear' }
 );
 
 move.setTransform(

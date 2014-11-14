@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <script type="text/javascript" src="src/main.js"></script>
     </head>
-    <body style="background-color:#404040">
+    <body>
         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
         <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -545,6 +545,8 @@
           </g>
         </svg>
         <script>
+            document.getElementsByTagName('body')[0].style.backgroundColor = '#404040';
+
             var mainpath = document.getElementById('mainpath');
             var mainlength = mainpath.getTotalLength();
             // Set up the starting positions
@@ -599,6 +601,10 @@
                   'stroke-dashoffset 3s ease-in-out';
                 // Go!
                 buttonpath.style.strokeDashoffset = '0';
+
+                buttonpath.addEventListener("webkitTransitionEnd", function(event){
+                    document.getElementsByTagName('body')[0].style.backgroundColor = 'white';
+                }, false);
               }, false);
             }, false);
         </script>
